@@ -1,8 +1,10 @@
-import { useTodoStore } from './index'
 export default {
   deleteTodo(id) {
-    const todoStore = useTodoStore()
     const filteredTodos = this.store.filter((item) => item.id != id)
-    todoStore.todos = filteredTodos
+    this.todos = filteredTodos
+  },
+  makeTodoFavorite(id) {
+    const favorite = this.todos.findIndex((todo) => todo.id === id)
+    this.todos[favorite].isFav = !this.todos[favorite].isFav
   }
 }

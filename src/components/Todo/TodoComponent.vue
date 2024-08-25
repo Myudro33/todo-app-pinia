@@ -4,7 +4,7 @@
         <div class="flex w-20 h-10 justify-end">
             <img @click="todoStore.deleteTodo(props.id)" class="cursor-pointer w-8 h-8"
                 src="../../../public/trash-can.png" alt="trashcan">
-            <img class="cursor-pointer w-8 h-8 ml-2"
+            <img @click="todoStore.makeTodoFavorite(props.id)" class="cursor-pointer w-8 h-8 ml-2"
                 :src="props.isFav ? '../../../public/solid-heart.png' : '../../../public/clear-heart.png'" alt="heart">
         </div>
     </div>
