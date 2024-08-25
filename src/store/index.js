@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-
+import actions from './actions'
 export const useTodoStore = defineStore('todoStore', {
   state: () => ({
     todos: [
@@ -11,5 +11,6 @@ export const useTodoStore = defineStore('todoStore', {
   getters: {
     store: (state) => state.todos,
     count: (state) => state.todos.length
-  }
+  },
+  actions
 })

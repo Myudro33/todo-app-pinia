@@ -1,8 +1,9 @@
 <template>
-    <div class="w-full h-20 border rounded-md shadow-md p-5 flex justify-between">
+    <div class="w-full h-20 my-2 border rounded-md shadow-md p-5 flex justify-between">
         <h1 class="text-xl font-bold">{{ props.title }}</h1>
         <div class="flex w-20 h-10 justify-end">
-            <img class="cursor-pointer w-8 h-8" src="../../../public/trash-can.png" alt="">
+            <img @click="todoStore.deleteTodo(props.id)" class="cursor-pointer w-8 h-8"
+                src="../../../public/trash-can.png" alt="trashcan">
             <img class="cursor-pointer w-8 h-8 ml-2"
                 :src="props.isFav ? '../../../public/solid-heart.png' : '../../../public/clear-heart.png'" alt="heart">
         </div>
@@ -10,5 +11,7 @@
 </template>
 
 <script setup>
+import { useTodoStore } from '@/store';
 const props = defineProps(['id', 'title', 'isFav'])
+const todoStore = useTodoStore()
 </script>
