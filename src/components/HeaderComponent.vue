@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-56 bg-red-500 flex flex-col justify-center items-center">
+    <div class="w-full h-56 bg-gray-400 flex flex-col justify-center items-center">
         <div class="flex items-center">
             <img class="w-14 h-20 -rotate-12" src="../../public/favicon.ico" alt="pinia logo">
             <h1 class="text-5xl font-bold ml-2">Pinia Tasks</h1>
