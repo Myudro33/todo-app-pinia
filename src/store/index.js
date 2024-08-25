@@ -9,6 +9,7 @@ export const useTodoStore = defineStore('todoStore', {
     ]
   }),
   getters: {
-    store: (state) => state.todos
+    store: (state) => state.todos,
+    count: (state) => state.todos.length
   }
 })
