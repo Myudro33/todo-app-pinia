@@ -5,7 +5,8 @@
             <img @click="todoStore.deleteTodo(props.id)" class="cursor-pointer w-8 h-8"
                 src="../../../public/trash-can.png" alt="trashcan">
             <img @click="todoStore.makeTodoFavorite(props.id)" class="cursor-pointer w-8 h-8 ml-2"
-                :src="props.isFav ? '../../../public/solid-heart.png' : '../../../public/clear-heart.png'" alt="heart">
+                :src="props.isFav ? 'https://github.com/Myudro33/todo-app-pinia/blob/main/public/solid-heart.png?raw=true' : 'https://github.com/Myudro33/todo-app-pinia/blob/main/public/clear-heart.png?raw=true'"
+                alt="heart">
         </div>
     </div>
 </template>
