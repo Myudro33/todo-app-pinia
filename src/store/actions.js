@@ -15,9 +15,15 @@ export default {
       alert(error)
     }
   },
-  makeTodoFavorite(id) {
+  async makeTodoFavorite(id) {
     const favorite = this.todos.findIndex((todo) => todo.id === id)
     this.todos[favorite].isFav = !this.todos[favorite].isFav
+    const requestOptions = {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...this.todos[favorite], isFav: this.todos[favorite].isFav })
+    }
+    await fetch(`http://localhost:3000/tasks/${id}`, requestOptions)
   },
   async addTodo(title) {
     try {
